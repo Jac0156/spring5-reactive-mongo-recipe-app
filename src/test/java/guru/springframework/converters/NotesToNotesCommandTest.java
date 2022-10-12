@@ -1,11 +1,13 @@
 package guru.springframework.converters;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
 import guru.springframework.commands.NotesCommand;
 import guru.springframework.domain.Notes;
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 /**
  * Created by jt on 6/21/17.
@@ -16,7 +18,7 @@ public class NotesToNotesCommandTest {
     public static final String RECIPE_NOTES = "Notes";
     NotesToNotesCommand converter;
 
-    @Before
+    @BeforeAll
     public void setUp() throws Exception {
         converter = new NotesToNotesCommand();
     }
